@@ -13,5 +13,6 @@ Vagrant.configure(2) do |config|
   config.vm.synced_folder "sources", "/var/www", type: "nfs"
   config.vm.provision "ansible" do |ansible|
     ansible.playbook = "playbook.yml"
+    ansible.sudo = true
   end
 end
