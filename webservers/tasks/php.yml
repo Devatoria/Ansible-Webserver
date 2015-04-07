@@ -6,3 +6,6 @@
     - php5-intl
     - php5-mysql
   notify: Restart PHP-FPM
+  
+- name: Configure PHP timezone
+  command: sed -i "s/;date.timezone =/date.timezone = Europe\/Paris/g" /etc/php5/fpm/php.ini /etc/php5/cli/php.ini
