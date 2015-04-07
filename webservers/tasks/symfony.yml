@@ -1,2 +1,5 @@
 - name: Install Symfony
-  command: curl -LsS http://symfony.com/installer -o /usr/local/bin/symfony
+  command: "{{ item }}"
+  with_items:
+    - curl -LsS http://symfony.com/installer -o /usr/local/bin/symfony
+    - chmod a+x /usr/local/bin/symfony
