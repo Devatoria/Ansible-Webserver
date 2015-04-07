@@ -1,0 +1,2 @@
+nginx_project_root: /var/www/web
+nginx_project_name: project

@@ -1,0 +1,8 @@
+- name: Install PHP and dependencies
+  apt: name={{item}} state=present
+  with_items:
+    - php5-fpm
+    - php5-cli
+    - php5-intl
+    - php5-mysql
+  notify: Restart PHP-FPM
