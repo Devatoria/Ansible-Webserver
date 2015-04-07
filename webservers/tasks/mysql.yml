@@ -1,2 +1,8 @@
 - name: Install MySQL
-  apt: name=mysql-server state=present
+  apt: name={{item}} state=present
+  with_items:
+    - mysql-server
+    - python-mysqldb
+  
+- name: Create MySQL database
+  mysql_db: name={{database_name}} state=present
