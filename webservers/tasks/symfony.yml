@@ -1,0 +1,2 @@
+- name: Install Symfony
+  command: curl -LsS http://symfony.com/installer -o /usr/local/bin/symfony
