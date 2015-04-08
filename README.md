@@ -28,6 +28,10 @@ https://oss-binaries.phusionpassenger.com/vagrant/boxes/latest/ubuntu-12.04-amd6
   * 8081 -> 8081 : phpmyadmin
 * Provisioning from Ansible provisioner, so you have to install Ansible to your Vagrant host (see Vagrant doc for more information)
 
+### Notes
+
+This provisioning does not create a new Symfony2 project but only install the Symfony installer. It's up to you to create a new project (see Symfony2 installation doc) or clone your existing project in the sources folder (ignored by gitignore).
+
 # Variables
 * **database_name:** MySQL database used by project
 * **nginx_project_root:** project root used by nginx
