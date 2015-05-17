@@ -9,6 +9,7 @@ Vagrant.configure(2) do |config|
   config.vm.box = "ubuntu"
   config.vm.network :forwarded_port, guest: 80, host: 8080
   config.vm.network :forwarded_port, guest: 8081, host: 8081
+  config.vm.network :forwarded_port, guest: 1080, host: 1080
   config.vm.network "private_network", type: "dhcp"
   config.vm.synced_folder "sources", "/var/www", type: "nfs"
   config.vm.provision "ansible" do |ansible|

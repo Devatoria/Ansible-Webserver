@@ -1,0 +1,13 @@
+- name: Install Ruby and dependencies
+  apt: name={{item}} state=present
+  with_items:
+    - ruby1.9.1-dev
+    - build-essential
+    - g++
+    - libsqlite3-dev
+
+- name: Install Mailcatcher
+  gem: name=mailcatcher state=latest
+
+- name: Add Mailcatcher to crontab
+  cron: name="Mailcatcher" special_time=reboot job="mailcatcher --http-ip=0.0.0.0"
