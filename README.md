@@ -36,3 +36,10 @@ This provisioning does not create a new Symfony2 project but only install the Sy
 * **database_name:** MySQL database used by project
 * **nginx_project_root:** project root used by nginx
 * **nginx_project_name:** project name used to write nginx log file
+
+# Notes
+## Run playbook locally
+
+In case you are running this using Windows, you can play the playbook locally using the command:
+
+`ansible-playbook -i "localhost," -c local playbook.yml`
