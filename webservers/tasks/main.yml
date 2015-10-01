@@ -2,5 +2,6 @@
 - include: php.yml
 - include: mysql.yml
 - include: phpmyadmin.yml
+- include: composer.yml
 - include: symfony.yml
 - include: mailcatcher.yml
