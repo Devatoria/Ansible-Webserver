@@ -11,6 +11,8 @@ Ansible provisioning configuration for webservers using nginx/php-fpm/mysql and 
 * mysql
 * symfony installer
 * phpmyadmin
+* composer
+* mailcatcher
 
 ## Configuration
 ### Ubuntu box
